@@ -1,0 +1,31 @@
+
+body{
+	margin:0;
+}
+.border_none{
+	border:none;
+}
+.display_none{
+	display:none;
+}
+
+#top{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px #d8d8d8 solid;
+}
+
+#fdasfrergfsgf{
+	clear:both;
+	margin-top:10px;
+}
+
+#left{
+	float:left;
+	width:200px;
+	background:#fff;
+}
+#right{
+	float:right;
+	background:#fff;
+}

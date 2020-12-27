@@ -1,0 +1,616 @@
+[ 2017-07-25T12:25:19+08:00 ] ::1 /database/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+SQL: select table_schema from information_schema.tables where table_schema LIKE  '%%' group by table_schema  [ RunTime:0.5460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007001s ]
+
+[ 2017-07-25T12:25:20+08:00 ] ::1 /database/index.php/Home/Index/adddatabase
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `databases` ORDER BY id  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\a5372e97a93fdf314e76563899793af4.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-25T12:25:23+08:00 ] ::1 /database/index.php/Home/Index/showtables/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0070s ]
+SQL: SELECT `basename` FROM `databases` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0000s ]
+SQL: select * from information_schema.tables a left join admindatabase.tables b on a.table_name = b.tablename left join admindatabase.databases c on a.table_schema = c.basename where a.table_schema='mylog' [ RunTime:0.0520s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\0732e488bac4667232bc1aa2a5b67950.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-25T12:25:58+08:00 ] ::1 /database/index.php/Home/Index/setfieldaliasprefixdata
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `tables` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tables` WHERE `databaseid` = 20 AND `tablename` = 'pl' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `tables` (`fieldaliasprefix`,`databaseid`,`tablename`) VALUES ('pl_','20','pl') [ RunTime:0.0130s ]
+
+[ 2017-07-25T12:26:01+08:00 ] ::1 /database/index.php/Home/Index/setnexus/maintable/pl/databaseid/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+NOTIC: [8] Undefined index: mainfield D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 52 行.
+NOTIC: [8] Undefined index: addendumtable D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 59 行.
+NOTIC: [8] Undefined index: addendumfield D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 75 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 76 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-25T12:26:23+08:00 ] ::1 /database/index.php/Home/Index/setnexusform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: validate D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `nexus` WHERE `databaseid` = 20 AND `maintable` = 'pl' AND `addendumtable` = 'article' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `nexus` (`databaseid`,`maintable`,`mainfield`,`addendumtable`,`addendumfield`,`type`) VALUES ('20','pl','articleid','article','id','1') [ RunTime:0.0000s ]
+
+[ 2017-07-25T12:26:24+08:00 ] ::1 /database/index.php/Home/Index/setnexus/maintable/pl/databaseid/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+NOTIC: [8] Undefined index: mainfield D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 52 行.
+NOTIC: [8] Undefined index: addendumtable D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 59 行.
+NOTIC: [8] Undefined index: addendumfield D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 75 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 76 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T12:52:17+08:00 ] ::1 /database/index.php/Home/Index/nexus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nexus`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `databases`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 4 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-25T13:35:10+08:00 ] ::1 /database/index.php/Home/Index/setnexus/id/7/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nexus` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T13:35:19+08:00 ] ::1 /database/index.php/Home/Index/setnexusform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: validate D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `nexus` SET `id`='7',`databaseid`='20',`maintable`='pl',`mainfield`='articleid',`addendumtable`='article',`addendumfield`='id',`type`='3' WHERE `id` = 7 [ RunTime:0.0010s ]
+
+[ 2017-07-25T13:35:21+08:00 ] ::1 /database/index.php/Home/Index/setnexus/id/7/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nexus` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T14:07:04+08:00 ] ::1 /database/index.php/Home/Index/setnexusform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: validate D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `nexus` SET `id`='7',`databaseid`='20',`maintable`='pl',`mainfield`='articleid',`addendumtable`='article',`addendumfield`='id',`type`='2' WHERE `id` = 7 [ RunTime:0.0010s ]
+
+[ 2017-07-25T14:07:05+08:00 ] ::1 /database/index.php/Home/Index/setnexus/id/7/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `nexus` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T19:34:39+08:00 ] ::1 /database/index.php/Home/Index/nexus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nexus`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `databases`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 4 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-25T19:34:47+08:00 ] ::1 /database/index.php/Home/Index/adddatabase
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `databases` ORDER BY id  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\a5372e97a93fdf314e76563899793af4.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T19:34:50+08:00 ] ::1 /database/index.php/Home/Index/showtables/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0060s ]
+SQL: SELECT `basename` FROM `databases` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0000s ]
+SQL: select * from information_schema.tables a left join admindatabase.tables b on a.table_name = b.tablename left join admindatabase.databases c on a.table_schema = c.basename where a.table_schema='mylog' [ RunTime:0.0060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\0732e488bac4667232bc1aa2a5b67950.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-07-25T19:36:04+08:00 ] ::1 /database/index.php/Home/Index/setnexus/maintable/pl/databaseid/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+NOTIC: [8] Undefined index: mainfield D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 52 行.
+NOTIC: [8] Undefined index: addendumtable D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 59 行.
+NOTIC: [8] Undefined index: addendumfield D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 66 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 75 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 76 行.
+NOTIC: [8] Undefined index: type D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T19:36:06+08:00 ] ::1 /database/index.php/Home/Index/nexus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `nexus`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `databases`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 4 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T20:05:33+08:00 ] ::1 /database/index.php/Home/Index/adddatabase
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `databases` ORDER BY id  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\a5372e97a93fdf314e76563899793af4.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T20:05:34+08:00 ] ::1 /database/index.php/Home/Index/nexus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `nexus`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `databases`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 4 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-07-25T20:05:39+08:00 ] ::1 /database/index.php/Home/Index/setnexus/id/7/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nexus` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T20:05:45+08:00 ] ::1 /database/index.php/Home/Index/setnexusform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\www\database\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `nexus` SET `id`='7',`databaseid`='20',`maintable`='pl',`mainfield`='articleid',`addendumtable`='article',`addendumfield`='id',`type`='1' WHERE `id` = 7 [ RunTime:0.0010s ]
+
+[ 2017-07-25T20:05:47+08:00 ] ::1 /database/index.php/Home/Index/setnexus/id/7/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `nexus` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\1336134a38180a2be92e5820ce012f0e.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T20:05:58+08:00 ] ::1 /database/index.php/Home/Index/nexus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nexus`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `databases`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 4 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T20:20:41+08:00 ] ::1 /database/index.php/Home/Index/nexus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `nexus` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `nexus`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `databases`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 4 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+NOTIC: [8] Undefined index: table_schema D:\www\database\Application\Runtime\Cache\Home\c00ae22b33540c2e29bf1109713d98e6.php 第 58 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T20:20:43+08:00 ] ::1 /database/index.php/Home/Index/adddatabase
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `databases` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `databases` ORDER BY id  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\a5372e97a93fdf314e76563899793af4.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T20:20:43+08:00 ] ::1 /database/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: select table_schema from information_schema.tables where table_schema LIKE  '%%' group by table_schema  [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page_title D:\www\database\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 4 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

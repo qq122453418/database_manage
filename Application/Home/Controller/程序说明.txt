@@ -1,0 +1,13 @@
+程序说明
+IndexController.class.php
+	1.index()
+		首页
+	2.adddatabase()
+		数据库列表（可以进行添加数据库，删除，编辑名称等操作）
+		
+	3.adddatabaseform()
+		添加、编辑 数据库表单处理接口
+		
+	3.deletedatabase()
+		删除数据库表单处理接口
+		

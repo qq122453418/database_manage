@@ -1,0 +1,54 @@
+<extend name="Frames/frame" />
+<block name="right">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			表信息
+		</div>
+		
+		<div class="panel-body">
+			<table class="table table-condensed table-hover table-bordered table-striped success">
+				<tr>
+					<th>数据库<br />table_schema</th>
+					<th>表明名称<br />table_name</th>
+					<th>字段别名前缀<br /></th>
+					<th>引擎<br />engine</th>
+					<th>字符编码<br />table_collation</th>
+					<th>注释<br />table_comment</th>
+					<th style="width:200px;"></th>
+				</tr>
+				<volist name="list" id="v" key="key">
+				<tr class="yirubianse gehangbianse">
+					<td><a href="__URL__/tables/database/{$v.table_schema}">{$v.table_schema}</a></td>
+					<td>
+						<a href="__URL__/tableinfo/database/{$v.table_schema}/table_name/{$v.table_name}">{$v.table_name}</a>
+					</td>
+					<td>
+						
+						<input class="border_none" type="text" value="{$v.fieldaliasprefix}" name="fieldaliasprefix" readonly onclick="openInput(this)"/>
+						<span class="btn btn-info btn-xs display_none" onclick="tjgg($(this).siblings('input'),{databaseid:'{$v.id}',tablename:'{$v.table_name}'})">保存</span>
+						<span class="btn btn-info btn-xs display_none" onclick="closeInput($(this).siblings('input'),true)">取消</span>
+					</td>
+					<td>
+						{$v.engine}
+					</td>
+					<td>
+						{$v.table_collation}
+					</td>
+					<td>
+						{$v.table_comment}
+					</td>
+					<td>
+						<a href="__URL__/setnexus/maintable/{$v.table_name}/databaseid/{$databaseid}" class="btn btn-info btn-xs">设置表关系</a>
+					</td>
+				</tr>
+				</volist>
+			</table>
+		</div>
+	</div>
+	<script>
+		function tjgg(ele,data){
+			var url = '__URL__/setfieldaliasprefixdata';
+			quickChange(ele,data,url);
+		}
+	</script>
+</block>

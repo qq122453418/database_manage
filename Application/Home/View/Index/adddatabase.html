@@ -1,0 +1,47 @@
+<extend name="Frames/frame" />
+<block name="right">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			数据库
+		</div>
+		<div class="panel-body">
+			<form class="form-inline" id="jfldsahkfdas" method="post" action="__URL__/adddatabaseform">
+				<div class="form-group">
+					<label>名称</label>
+					<input class="form-control" type="text" value="" name="basename" placeholder="数据库名称" />
+					<input type="button" class="btn btn-info" value="添加" onclick="goForm('#jfldsahkfdas')" />
+				</div>
+			</form>
+		</div>
+		<div class="panel-body">
+			<table class="table table-condensed table-hover table-bordered table-striped success">
+				<tr>
+					<th style="width:40px;">id</th>
+					<th>名称</th>
+					<th style="width:200px;">编辑</th>
+					
+				</tr>
+				<volist name="list" id="v" key="key">
+				<tr>
+					<td>{$v.id}</td>
+					<td>
+						<input class="border_none" type="text" value="{$v.basename}" name="basename" readonly onclick="openInput(this)"/>
+						<span class="btn btn-info btn-xs display_none" onclick="tjgg($(this).siblings('input'),{id:{$v.id}})">保存</span>
+						<span class="btn btn-info btn-xs display_none" onclick="closeInput($(this).siblings('input'),true)">取消</span>
+					</td>
+					<td>
+						<span href="__URL__/deletedatabase/id/{$v.id}" class="btn btn-danger btn-xs" onclick="getUrl(this)">删除</span>
+						<a href="__URL__/showtables/id/{$v.id}" class="btn btn-info btn-xs">数据表</a>
+					</td>
+				</tr>
+				</volist>
+			</table>
+		</div>
+	</div>
+	<script>
+		function tjgg(ele,data){
+			var url = '__URL__/adddatabaseform';
+			quickChange(ele,data,url);
+		}
+	</script>
+</block>

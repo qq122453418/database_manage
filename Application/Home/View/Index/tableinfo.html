@@ -1,0 +1,57 @@
+<extend name="Frames/frame" />
+<block name="right">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			表详情
+		</div>
+		
+		<div class="panel-body">
+			<table class="table table-condensed table-hover table-bordered table-striped success">
+				<tr>
+					<th>数据库<br />table_schema</th>
+					<th>表明名称<br />table_name</th>
+					<th>字段名<br />column_name</th>
+					<th>默认值<br />column_default</th>
+					<th>isnull<br />is_nullable</th>
+					<th>类型<br />data_type</th>
+					<th>字符编码<br />collation_name</th>
+					<th>索引类型<br />column_key</th>
+					<th>注释<br />column_comment</th>
+					<th style="width:200px;"></th>
+				</tr>
+				<volist name="list" id="v" key="key">
+				<tr class="yirubianse gehangbianse">
+					<td><a href="__URL__/tables/database/{$v.table_schema}">{$v.table_schema}</a></td>
+					<td>
+						<a href="__URL__/tableinfo/database/{$v.table_schema}/table_name/{$v.table_name}">{$v.table_name}</a>
+					</td>
+					<td>
+						{$v.column_name}
+					</td>
+					<td>
+						{$v.column_default}
+					</td>
+					<td>
+						{$v.is_nullable}
+					</td>
+					<td>
+						{$v.data_type}
+					</td>
+					<td>
+						{$v.collation_name}
+					</td>
+					<td>
+						{$v.column_key}
+					</td>
+					<td>
+						{$v.column_comment}
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				</volist>
+			</table>
+		</div>
+	</div>
+</block>
